@@ -1,20 +1,20 @@
 # Go Error Handling Demo
 
-This project demonstrates various techniques for handling errors gracefully in Go, as discussed in the "\[Handling Errors Gracefully in Go\](\[Link to your slides if available, otherwise remove\])" presentation.
+This project demonstrates various techniques for handling errors gracefully in Go
 
 It includes examples of:
 
-* Basic error returning and checking.
+- Basic error returning and checking.
 
-* Creating errors with `errors.New` and `fmt.Errorf`.
+- Creating errors with `errors.New` and `fmt.Errorf`.
 
-* Error wrapping using `fmt.Errorf` with the `%w` verb (Go 1.13+).
+- Error wrapping using `fmt.Errorf` with the `%w` verb (Go 1.13+).
 
-* Inspecting error chains with `errors.Is()` for sentinel errors.
+- Inspecting error chains with `errors.Is()` for sentinel errors.
 
-* Inspecting error chains with `errors.As()` for custom error types.
+- Inspecting error chains with `errors.As()` for custom error types.
 
-* Defining and using custom error types with an `Unwrap()` method.
+- Defining and using custom error types with an `Unwrap()` method.
 
 The application is designed to be run within a Docker container.
 
@@ -31,9 +31,9 @@ error-handling-demo/
 
 ## Prerequisites
 
-* **Docker:** Ensure Docker is installed and running on your system. Download from [docker.com](https://www.docker.com/get-started).
+- **Docker:** Ensure Docker is installed and running on your system. Download from [docker.com](https://www.docker.com/get-started).
 
-* **Go (Optional, for local development):** Go version 1.13 or later if you wish to run or modify the Go code directly without Docker. Download from [golang.org](https://golang.org/dl/).
+- **Go (Optional, for local development):** Go version 1.13 or later if you wish to run or modify the Go code directly without Docker. Download from [golang.org](https://golang.org/dl/).
 
 ## Docker Instructions
 
@@ -44,7 +44,7 @@ These instructions will guide you through building the Docker image and running 
 If you have this project in a Git repository, clone it:
 
 ```
-git clone [your-repository-url]
+git clone https://github.com/munich-gophers/go-error-handling-demo
 cd error-handling-demo
 
 ```
@@ -72,9 +72,9 @@ docker build -t go-error-handling-demo .
 
 ```
 
-* `-t go-error-handling-demo`: Tags the image with the name `go-error-handling-demo`. You can choose a different name/tag.
+- `-t go-error-handling-demo`: Tags the image with the name `go-error-handling-demo`. You can choose a different name/tag.
 
-* `.`: Specifies that the build context (location of `Dockerfile` and source files) is the current directory.
+- `.`: Specifies that the build context (location of `Dockerfile` and source files) is the current directory.
 
 ### 4. Run the Docker Container
 
@@ -85,9 +85,9 @@ docker run --rm go-error-handling-demo
 
 ```
 
-* `--rm`: Automatically removes the container when it exits. This is useful for keeping your system clean after running short-lived demo applications.
+- `--rm`: Automatically removes the container when it exits. This is useful for keeping your system clean after running short-lived demo applications.
 
-* `go-error-handling-demo`: The name of the image you built in the previous step.
+- `go-error-handling-demo`: The name of the image you built in the previous step.
 
 ## Expected Output
 
@@ -129,14 +129,14 @@ If you have Go installed (version 1.13+), you can also run the application direc
 
    ```
    go mod tidy
-   
+
    ```
 
 3. Run the `main.go` file:
 
    ```
    go run main.go
-   
+
    ```
 
 This will produce the same output as running the Docker container.
